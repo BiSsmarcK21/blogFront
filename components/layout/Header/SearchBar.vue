@@ -33,7 +33,7 @@
     background: inherit;
     border: none;
     align-self: center;
-    font-family: Roboto, serif;
+    font-family: var(--primary-font);
     outline: none;
   }
 }

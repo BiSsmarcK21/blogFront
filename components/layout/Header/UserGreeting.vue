@@ -13,11 +13,11 @@
   h1 {
     font-size: 24px;
     margin: 0;
-    color: #575664;
+    color: var(--primary-color-marengo);
   }
   p {
     margin: 0;
-    color: #cdcdcd;
+    color: var(--primary-color-lightTelegray);
   }
 }
 </style>

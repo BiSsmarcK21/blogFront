@@ -11,6 +11,8 @@
     </div>
   </header>
 
+
+
 </template>
 
 <style module>
@@ -19,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #f9f9f9;
-  font-family: Roboto,serif;
+  font-family: var(--primary-font);
 }
 
 .headerRightSide {
@@ -27,5 +29,6 @@
   gap: 20px;
 }
 
-
 </style>
+<script setup lang="ts">
+</script>
