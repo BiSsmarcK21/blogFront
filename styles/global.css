@@ -1,0 +1,13 @@
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 100vw;*/
+
+}
+
+.hoverActions {
+    cursor: pointer;
+}
