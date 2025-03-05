@@ -1,4 +1,3 @@
-
 <template>
 
   <div :class="$style.contentPosition">
@@ -14,6 +13,3 @@
   width: 1440px;
 }
 </style>
-<script setup lang="ts">
-
-</script>

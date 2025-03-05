@@ -24,7 +24,8 @@ export default defineNuxtConfig({
   },
 
   css: [
-      '/styles/global.css'
+      '/styles/global.css',
+      '/styles/variables.css',
   ],
 
   modules: ['@nuxt/fonts'],
