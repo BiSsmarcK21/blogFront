@@ -47,16 +47,10 @@
 
 .profileContentUser {
   grid-area: user;
-/*  display: flex;
-  flex-direction: column;*/
-/*  flex: 800px;*/
 }
 
 .profileContentAbout {
   grid-area: about;
-/*  display: flex;
-  flex-direction: column;*/
-/*  flex: 400px;*/
 }
 
 .profileContentPosts {
@@ -69,6 +63,9 @@
 
 .profileContentPhotos {
   grid-area: photos;
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
 }
 
 .profileContentContainer {

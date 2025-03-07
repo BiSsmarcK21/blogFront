@@ -33,7 +33,7 @@ const updatePost = (updatePost) => {
     <div :class="$style.postItemContainerInfo">
       <div :class="$style.postItemContainerInfoAboutUser">
         <div>
-          <img :class="$style.postItemContainerInfoPhoto" src="/public/images/icon.jpg" alt="not found">
+          <img :class="$style.postItemContainerInfoPhoto" src="/public/images/iticon.png" alt="not found">
         </div>
         <div :class="$style.postItemContainerInfoUser">Александр П.</div>
       </div>

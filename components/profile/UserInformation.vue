@@ -17,12 +17,12 @@ const closeModal = () => {
     </div>
     <div :class="$style.userInformationContainerContent">
       <div :class="$style.contentBlock">
-        <img :class="$style.userInformationBackgroundIconSetup" src="/public/images/icon.jpg" alt="not found">
+        <img :class="$style.userInformationBackgroundIconSetup" src="/public/images/iticon.png" alt="not found">
       </div>
       <div :class="$style.contentBlock">
         <div :class="$style.aboutUser">
-          <div :class="$style.aboutUserName">Прибылов Александр Ильич</div>
-          <div :class="$style.aboutUserStatus">Future full-stack programming, танкист... </div>
+          <div :class="$style.aboutUserName">Тестов Тест Тестович</div>
+          <div :class="$style.aboutUserStatus">Такой себе тест...</div>
           <div :class="$style.aboutUserLocation">
             <div>
               <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -32,7 +32,7 @@ const closeModal = () => {
 	C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"/>
               </svg>
             </div>
-            <div :class="$style.aboutUserLocationText">Москва</div>
+            <div :class="$style.aboutUserLocationText">Тест</div>
           </div>
         </div>
         <div :class="$style.aboutUserButton" class="hoverActions" @click="openModal">

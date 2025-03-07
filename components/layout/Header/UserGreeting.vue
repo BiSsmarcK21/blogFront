@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.userGreeting">
-    <h1>Welcome, Sashastrit</h1>
+    <h1>Welcome, Test</h1>
     <p>27.02.2025</p>
   </div>
 </template>
@@ -21,5 +21,3 @@
   }
 }
 </style>
-
-//TODO: поменять обращение к тегу на класс везде

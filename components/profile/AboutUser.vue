@@ -11,7 +11,7 @@
                   stroke="#f47021" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div :class="$style.contentInformationText">palexandrli@mail.ru</div>
+        <div :class="$style.contentInformationText">testtest@test.ru</div>
       </div>
 
       <div :class="$style.contentInformation">

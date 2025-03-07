@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.userIcon">
-      <img class="hoverActions" width="50px" height="52px" src="/public/images/icon.jpg" alt="not found">
+      <img class="hoverActions" width="50px" height="52px" src="/public/images/iticon.png" alt="not found">
   </div>
 </template>
 
