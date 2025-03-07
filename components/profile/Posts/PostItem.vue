@@ -1,9 +1,31 @@
 <script setup>
-  defineProps ({
+  const props = defineProps ({
     post: Object
   })
 
+const { $api } = useNuxtApp()
+const { deletePost: deleteThisPost } = usePostsState()
+const deletePost = async (id) => {
+  $api.post.deletePost({
+    id
+  })
+  deleteThisPost(id)
+}
 
+const isModalOpen = ref(false)
+const openModal = () => {
+    isModalOpen.value = true
+  console.log(props.post)
+}
+
+const closeModal = () => {
+    isModalOpen.value = false
+}
+
+const updatePost = (updatePost) => {
+    props.post.title = updatePost.title
+    props.post.content = updatePost.content
+}
 </script>
 
 <template>
@@ -39,16 +61,30 @@
         </svg>
       </div>
     </div>
+      <div :class="$style.postItemContainerPost">
+        <div :class="$style.postItemContainerPostTitle">
+          {{ post.title }}
+        </div>
 
-    <div :class="$style.postItemContainerPost">
-      <div :class="$style.postItemContainerPostTitle">
-        {{ post.title }}
+        <div :class="$style.postItemContainerPostContent">
+          {{ post.content }}
+        </div>
       </div>
 
-      <div :class="$style.postItemContainerPostContent">
-        {{ post.content }}
+      <div :class="$style.postItemContainerActions">
+        <div>
+          <button type="button" :class="$style.postItemContainerActionsButton" @click="deletePost(post.id)">Удалить</button>
+        </div>
+        <div>
+          <button :class="$style.postItemContainerActionsButton" @click="openModal">Редактировать</button>
+        </div>
+
+
+          <modal  :isOpen="isModalOpen" @close="closeModal">
+            <FormsUpdatePost v-if="post" :post="post" @close="closeModal" @updatePost="updatePost"/>
+          </modal>
+
       </div>
-    </div>
   </div>
 </template>
 
@@ -100,5 +136,21 @@
 
 .postItemContainerInfoUser {
   font-family: var(--primary-font);
+}
+
+.postItemContainerActions {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+}
+
+.postItemContainerActionsButton {
+  padding: 8px 16px 8px 16px;
+  background-color: #f46b0f;
+  color: white;
+  font-family: var(--primary-font);
+  border-radius: 12px;
+  align-self: center;
+  cursor: pointer;
 }
 </style>

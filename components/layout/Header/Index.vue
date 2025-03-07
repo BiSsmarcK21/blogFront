@@ -21,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #f9f9f9;
-  font-family: var(--primary-font);
+  font-family: var(--primary-font),serif;
 }
 
 .headerRightSide {

@@ -12,14 +12,17 @@ const post = httpClient => ({
         })
     },
 
-    deletePost(body) {
+    deletePost(id) {
         return httpClient(`${this.endPoint}/delete/`, {
-            method: 'DELETE',
-            body
+            method: 'POST',
+            body: {
+                id
+            }
         })
     },
 
     updatePost(body) {
+        console.log(body)
         return httpClient(`${this.endPoint}/update`, {
             method: 'POST',
             body
