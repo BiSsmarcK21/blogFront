@@ -9,7 +9,8 @@
 
 <style module>
 .contentPosition {
-  max-width: 1440px;
-  width: 1440px;
+    margin-bottom: 20px;
+    max-width: 1440px;
+    width: 1440px;
 }
 </style>

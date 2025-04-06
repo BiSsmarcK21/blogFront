@@ -1,6 +1,25 @@
 <script setup>
 const { posts, isLoading } = usePostsState()
 
+const pageSize = ref(4)
+const currentPage = ref(1)
+
+
+const displayedPosts = computed(() => {
+    const start = (currentPage.value-1) * pageSize.value
+    const end = start + pageSize.value
+    return posts.value.slice(start, end)
+})
+
+
+const pageCount = computed(() => {
+    return Math.ceil(posts.value.length / pageSize.value)
+})
+
+const setPage = (page) => {
+   currentPage.value = page
+}
+
 </script>
 
 <template>
@@ -13,12 +32,13 @@ const { posts, isLoading } = usePostsState()
       <div :class="$style.ProfilePostsContainerMenuContent">About</div>
     </div>
         <template v-if="!isLoading && posts && posts.length > 0">
-          <div :class="$style.ProfilePostsContainerPosts" v-for="post in posts" :key="post.id">
+          <div :class="$style.ProfilePostsContainerPosts" v-for="post in displayedPosts" :key="post.id">
 
             <ProfilePostsPostItem
                 :post="post"
             />
           </div>
+            <ProfilePostsPagination :pages="pageCount" @set-page="setPage"/>
         </template>
 
         <div :class="$style.ProfilePostsContainerPostsNone" v-else-if="isLoading">
