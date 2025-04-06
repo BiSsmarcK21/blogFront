@@ -15,7 +15,7 @@ const deletePost = async (id) => {
 const isModalOpen = ref(false)
 const openModal = () => {
     isModalOpen.value = true
-  console.log(props.post)
+    console.log(props.post)
 }
 
 const closeModal = () => {
